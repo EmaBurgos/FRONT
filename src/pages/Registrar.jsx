@@ -95,6 +95,7 @@ const Registrar = () => {
               type="password"
               placeholder="Tu contraseña"
               className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
+              autoComplete="new-password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
@@ -107,6 +108,7 @@ const Registrar = () => {
               type="password"
               placeholder="Repite tu contraseña"
               className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
+              autoComplete="new-password"
               value={repetirPassword}
               onChange={(e) => setRepetirPassword(e.target.value)}
             />

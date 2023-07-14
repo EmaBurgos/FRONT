@@ -14,7 +14,7 @@ const Footer = () => {
             </span>
           </p>
           <img
-            src="../../public/linkedin.png"
+            src="https://veterinaria-seven.vercel.app/linkedin.png"
             alt="Linkedln"
             width="30"
             height="30"
