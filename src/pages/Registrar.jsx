@@ -71,6 +71,7 @@ const Registrar = () => {
               type="text"
               placeholder="Tu nombre"
               className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
+              autoComplete="username"
               value={nombre}
               onChange={(e) => setNombre(e.target.value)}
             />
@@ -83,6 +84,7 @@ const Registrar = () => {
               type="email"
               placeholder="Email de registro"
               className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
+              autoComplete="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />

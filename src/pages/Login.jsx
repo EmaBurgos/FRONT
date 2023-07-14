@@ -59,6 +59,7 @@ const Login = () => {
               type="email"
               placeholder="Email de Registro"
               className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
+              autoComplete="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
@@ -71,6 +72,7 @@ const Login = () => {
               type="password"
               placeholder="Tu contraseña*"
               className="border w-full p-3 mt-3 bg-gray-50 rounded-xl"
+              autoComplete="current-password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
@@ -80,7 +82,6 @@ const Login = () => {
             value="Iniciar Sesión"
             className="bg-indigo-700 w-full py-3 px-10 rounded-xl text-white uppercase font-bold mt-5 hover:cursor-pointer hover:bg-indigo-800
             md:w-auto"
-            autoComplete="current-password"
           />
         </form>
         <nav className="mt-10 lg:flex lg:justify-between">
