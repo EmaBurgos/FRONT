@@ -12,26 +12,26 @@ const ConfimarCuenta = () => {
 
   const { id } = params;
 
-  useEffect(() => {
-    const confirmarCuenta = async () => {
-      try {
-        const url = `/confirmar/${id}`;
-        const { data } = await clienteAxios(url);
-        setCuentaConfirmada(true);
-        setAlerta({
-          msg: data.msg,
-        });
-      } catch (error) {
-        setAlerta({
-          msg: error.response.data.msg,
-          error: true,
-        });
-      }
-      setCargando(false);
-    };
+  // useEffect(() => {
+  //   const confirmarCuenta = async () => {
+  //     try {
+  //       const url = `/confirmar/${id}`;
+  //       const { data } = await clienteAxios(url);
+  //       setCuentaConfirmada(true);
+  //       setAlerta({
+  //         msg: data.msg,
+  //       });
+  //     } catch (error) {
+  //       setAlerta({
+  //         msg: error.response.data.msg,
+  //         error: true,
+  //       });
+  //     }
+  //     setCargando(false);
+  //   };
 
-    confirmarCuenta();
-  }, []);
+  //   confirmarCuenta();
+  // }, []);
 
   return (
     <>
