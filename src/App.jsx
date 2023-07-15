@@ -23,19 +23,19 @@ function App() {
           <Routes>
             <Route path="/" element={<AuthLayout />}>
               <Route index element={<Login />} />
-              <Route path="registrar" element={<Registrar />} />
-              <Route path="olvide-password" element={<OlvidePassword />} />
+              <Route path="/registrar" element={<Registrar />} />
+              <Route path="/olvide-password" element={<OlvidePassword />} />
               <Route
-                path="olvide-password/:token"
+                path="/olvide-password/:token"
                 element={<NuevaContraseña />}
               />
-              <Route path="confirmar/:id" element={<ConfimarCuenta />} />
+              <Route path="/confirmar/:id" element={<ConfimarCuenta />} />
             </Route>
 
             <Route path="/admin" element={<RutaProtegida />}>
               <Route index element={<AdministrarPacientes />} />
-              <Route path="perfil" element={<EditarPerfil />} />
-              <Route path="cambiar-password" element={<CambiarPassword />} />
+              <Route path="/perfil" element={<EditarPerfil />} />
+              <Route path="/cambiar-password" element={<CambiarPassword />} />
             </Route>
           </Routes>
         </PacientesProvider>
