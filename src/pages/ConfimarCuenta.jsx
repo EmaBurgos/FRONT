@@ -13,31 +13,25 @@ const ConfimarCuenta = () => {
   const { id } = params;
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setCuentaConfirmada(true);
+    const confirmarCuenta = async () => {
+      try {
+        const url = `/veterinarios/confirmar/${id}`;
+        const { data } = await clienteAxios(url);
+        setCuentaConfirmada(true);
+        setAlerta({
+          msg: data.msg,
+        });
+      } catch (error) {
+        setAlerta({
+          msg: error.response.data.msg,
+          error: true,
+        });
+      }
       setCargando(false);
-    }, 2000); // Cambia el tiempo de espera a tu preferencia (por ejemplo, 2000 ms = 2 segundos)
+    };
 
-    return () => clearTimeout(timer);
+    confirmarCuenta();
   }, []);
-  // const confirmarCuenta = async () => {
-  //   try {
-  //     const url = `/veterinarios/confirmar/${id}`;
-  //     const { data } = await clienteAxios(url);
-  //     setCuentaConfirmada(true);
-  //     setAlerta({
-  //       msg: data.msg,
-  //     });
-  //   } catch (error) {
-  //     setAlerta({
-  //       msg: error.response.data.msg,
-  //       error: true,
-  //     });
-  //   }
-  //   setCargando(false);
-  // };
-
-  // confirmarCuenta();
 
   return (
     <>
