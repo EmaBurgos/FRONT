@@ -34,8 +34,8 @@ function App() {
 
             <Route path="/admin" element={<RutaProtegida />}>
               <Route index element={<AdministrarPacientes />} />
-              <Route path="/perfil" element={<EditarPerfil />} />
-              <Route path="/cambiar-password" element={<CambiarPassword />} />
+              <Route path="perfil" element={<EditarPerfil />} />
+              <Route path="cambiar-password" element={<CambiarPassword />} />
             </Route>
           </Routes>
         </PacientesProvider>
