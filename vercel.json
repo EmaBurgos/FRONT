@@ -1,13 +1,3 @@
 {
-  "routes": [
-    { "src": "/", "dest": "/" },
-    { "src": "/registrar", "dest": "/" },
-    { "src": "/olvide-password", "dest": "/" },
-    { "src": "/confirmar/:id", "dest": "/api/confirmar" },
-    { "src": "/admin", "dest": "/" },
-    { "src": "/perfil", "dest": "/admin" },
-    { "src": "/cambiar-password", "dest": "/admin" }
-
-    
-  ]
+    "rewrites": [{ "source": "/(.*)", "destination": "/index.html" }]
 }
